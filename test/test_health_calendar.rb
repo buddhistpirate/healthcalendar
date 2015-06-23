@@ -10,8 +10,7 @@ class TestHealthCalendar < Minitest::Test
   end
 
   def test_connect_to_runkeeper
-    health_calendar.connect_to_runkeeper()
     activites_response = health_calendar.activities
-    assert_equal activites_response.size, 0
+    assert_equal activites_response['size'], 179
   end
 end
